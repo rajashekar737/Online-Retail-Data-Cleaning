@@ -82,8 +82,9 @@ The analysis found:
 - Negative quantities associated with cancelled invoices: **9,251**
 - Negative quantities without a cancelled invoice: **1,336**
 
-Cancelled transactions were retained because they represent meaningful transaction history rather than automatically treating them as erroneous records.
+The **9,251 cancelled transaction records were retained** because they represent meaningful transaction history.
 
+The **1,336 negative-quantity records without a cancelled invoice were removed** because there was insufficient evidence to treat them as valid sales transactions.
 ### 4. Invalid Unit Prices
 
 Two records contained negative UnitPrice values.
