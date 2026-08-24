@@ -493,51 +493,79 @@ Online-Retail-Data-Cleaning/
 
 ---
 
-# ▶️ How to Run
+## ▶️ How to Run
+
+Follow these steps to run the project from the GitHub repository.
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/rajashekar737/Online-Retail-Data-Cleaning.git
-```
+    git clone https://github.com/rajashekar737/Online-Retail-Data-Cleaning.git
+    cd Online-Retail-Data-Cleaning
 
-### 2. Navigate to the project
+### 2. Download the raw dataset
 
-```bash
-cd Online-Retail-Data-Cleaning
-```
+The raw dataset is stored using Git Large File Storage (Git LFS).
 
-### 3. Create a virtual environment
+    git lfs install
+    git lfs pull
 
-```bash
-python -m venv venv
-```
+The dataset will be available at:
 
-### 4. Activate the environment
+    data/raw/Online Retail.xlsx
 
-Windows:
+### 3. Create and activate a virtual environment
 
-```bash
-venv\Scripts\activate
-```
+For Windows PowerShell:
 
-### 5. Install dependencies
+    python -m venv venv
+    .\venv\Scripts\Activate.ps1
 
-```bash
-pip install -r requirements.txt
-```
+For Windows Command Prompt:
 
-### 6. Open the notebook
+    python -m venv venv
+    venv\Scripts\activate
+
+### 4. Install dependencies
+
+    pip install -r requirements.txt
+
+### 5. Launch Jupyter Notebook
+
+    jupyter notebook
 
 Open:
 
-```text
-notebooks/Week_1_Data_Cleaning.ipynb
-```
+    notebooks/Week_1_Data_Cleaning.ipynb
 
-Run the notebook cells sequentially.
+Run all notebook cells sequentially.
 
----
+The notebook performs dataset exploration, data quality analysis, missing-value analysis, duplicate detection, transaction validation, outlier investigation, text cleaning, date validation, temporal feature engineering, transaction value calculation, and final data quality verification.
+
+### 6. Generated Output
+
+After successful execution, the cleaned dataset is saved to:
+
+    data/processed/Online_Retail_Cleaned.csv
+
+### Execution Flow
+
+    GitHub Repository
+            ↓
+        Git LFS
+            ↓
+    data/raw/Online Retail.xlsx
+            ↓
+    Week_1_Data_Cleaning.ipynb
+            ↓
+      Data Exploration
+            ↓
+        Data Cleaning
+            ↓
+       Data Validation
+            ↓
+     Feature Engineering
+            ↓
+    data/processed/Online_Retail_Cleaned.csv
 
 # 📚 Dataset Source
 
