@@ -374,75 +374,73 @@ The approach therefore prioritizes **data integrity, transparency, and business 
 
 The `screenshots/` directory contains evidence of the major stages of the data-cleaning and preprocessing workflow.
 
-### Dataset Loading
+### 1. Dataset Loading
 
-![Dataset Loading](screenshots/01_dataset_loading.png)
+![Dataset Loading](screenshots/01_dataset_preview.png)
 
-### Dataset Structure
+### 2. Dataset Structure
 
 ![Dataset Structure](screenshots/02_dataset_structure.png)
 
-### Statistical Summary
+### 3. Statistical Summary
 
 ![Statistical Summary](screenshots/03_statistical_summary.png)
 
-### Categorical Summary
+### 4. Categorical Summary
 
 ![Categorical Summary](screenshots/04_categorical_summary.png)
 
-### Missing Value Analysis
+### 5. Missing Value Analysis
 
 ![Missing Value Analysis](screenshots/05_missing_value_analysis.png)
 
-### Duplicate Analysis
+### 6. Duplicate Analysis
 
 ![Duplicate Analysis](screenshots/06_duplicate_analysis.png)
 
-### Duplicate Validation
+### 7. Duplicate Removal Validation
 
-![Duplicate Validation](screenshots/07_duplicate_validation.png)
+![Duplicate Removal Validation](screenshots/07_duplicate_removal_validation.png)
 
-### Negative Quantity Investigation
+### 8. Negative Quantity Investigation
 
 ![Negative Quantity Investigation](screenshots/08_negative_quantity_investigation.png)
 
-### Non-Cancelled Negative Quantity Analysis
+### 9. Non-Cancelled Negative Quantity Analysis
 
 ![Non-Cancelled Negative Quantity Analysis](screenshots/09_non_cancelled_negative_analysis.png)
 
-### Invalid Record Removal
+### 10. Invalid Record Removal
 
 ![Invalid Record Removal](screenshots/10_invalid_record_removal.png)
 
-### UnitPrice Validation
+### 11. UnitPrice Validation
 
 ![UnitPrice Validation](screenshots/11_unitprice_validation.png)
 
-### Zero-Price Investigation
+### 12. Zero-Price Investigation
 
 ![Zero-Price Investigation](screenshots/12_zero_price_investigation_img1.png)
 
-### InvoiceDate Validation
+### 13. InvoiceDate Validation
 
 ![InvoiceDate Validation](screenshots/13_invoice_date_validation.png)
 
-### Date Feature Extraction
+### 14. Date Feature Extraction
 
 ![Date Feature Extraction](screenshots/14_date_feature_extraction.png)
 
-### Final Data Quality Check
+### 15. Final Data Quality Check
 
 ![Final Data Quality Check](screenshots/15_final_data_quality_check.png)
 
-### Final Processed Dataset
+### 16. Final Processed Dataset
 
 ![Final Processed Dataset](screenshots/16_final_processed_dataset.png)
 
-### Processed Dataset Saved
+### 17. Processed Dataset Saved
 
 ![Processed Dataset Saved](screenshots/17_processed_dataset_saved.png)
-
----
 
 # 📁 Project Structure
 
@@ -457,13 +455,13 @@ Online-Retail-Data-Cleaning/
 │   └── Week_1_Data_Cleaning.ipynb
 │
 ├── screenshots/
-│   ├── 01_dataset_loading.png
+│   ├── 01_dataset_preview.png
 │   ├── 02_dataset_structure.png
 │   ├── 03_statistical_summary.png
 │   ├── 04_categorical_summary.png
 │   ├── 05_missing_value_analysis.png
 │   ├── 06_duplicate_analysis.png
-│   ├── 07_duplicate_validation.png
+│   ├── 07_duplicate_removal_validation.png
 │   ├── 08_negative_quantity_investigation.png
 │   ├── 09_non_cancelled_negative_analysis.png
 │   ├── 10_invalid_record_removal.png
