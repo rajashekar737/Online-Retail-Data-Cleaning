@@ -311,71 +311,142 @@ A transaction-level monetary value was calculated using:
 
 ```text
 TransactionValue = Quantity × UnitPrice
-Final Data Quality Verification
+```
+
+This feature provides a useful measure for subsequent revenue and transaction-level analysis.
+
+---
+
+# 📋 Final Data Quality Verification
 
 After preprocessing, the final dataset contained:
 
-Records: 535,303
-Columns: 15
-Duplicate records: 0
-Invalid InvoiceDate records: 0
-Future InvoiceDate records: 0
-Negative UnitPrice records: 0
-Missing Description: 592
-Missing CustomerID: 133,699
+- **Records:** 535,303
+- **Columns:** 15
+- **Duplicate records:** 0
+- **Invalid InvoiceDate records:** 0
+- **Future InvoiceDate records:** 0
+- **Negative UnitPrice records:** 0
+- **Missing Description:** 592
+- **Missing CustomerID:** 133,699
 
 The processed dataset was successfully saved as:
 
+```text
 data/processed/Online_Retail_Cleaned.csv
-📈 Impact of Preprocessing
+```
+
+---
+
+# 📈 Impact of Preprocessing
 
 The preprocessing process improves the reliability and consistency of the dataset for subsequent analysis.
 
-Positive Impacts
-Duplicate observations were removed.
-Invalid negative prices were eliminated.
-Date validity was confirmed.
-Text fields were standardized.
-Useful temporal features were created.
-Transaction values were calculated.
-Potential outliers were identified and investigated.
-Non-product transactions were explicitly identified.
-Potential Limitations
+### Positive Impacts
+
+- Duplicate observations were removed.
+- Invalid negative prices were eliminated.
+- Date validity was confirmed.
+- Text fields were standardized.
+- Useful temporal features were created.
+- Transaction values were calculated.
+- Potential outliers were identified and investigated.
+- Non-product transactions were explicitly identified.
+
+### Potential Limitations
 
 Preprocessing decisions can influence subsequent analysis.
 
 For example:
 
-Removing duplicate records reduces repeated observations.
-Removing invalid negative prices prevents incorrect monetary calculations.
-Retaining cancelled transactions preserves business information but requires appropriate handling during revenue analysis.
-Retaining legitimate extreme quantities prevents the loss of valid bulk transactions.
-Missing CustomerID values limit customer-level analysis.
-Administrative transactions may need to be excluded for certain product-sales analyses.
+- Removing duplicate records reduces repeated observations.
+- Removing invalid negative prices prevents incorrect monetary calculations.
+- Retaining cancelled transactions preserves business information but requires appropriate handling during revenue analysis.
+- Retaining legitimate extreme quantities prevents the loss of valid bulk transactions.
+- Missing CustomerID values limit customer-level analysis.
+- Administrative transactions may need to be excluded for certain product-sales analyses.
 
-The approach therefore prioritizes data integrity, transparency, and business context rather than automatically deleting every unusual observation.
+The approach therefore prioritizes **data integrity, transparency, and business context** rather than automatically deleting every unusual observation.
 
-📸 Analysis Evidence
+---
 
-The screenshots/ directory contains evidence of the major stages of the data-cleaning and preprocessing workflow.
+# 📸 Analysis Evidence
 
-Dataset Structure
+The `screenshots/` directory contains evidence of the major stages of the data-cleaning and preprocessing workflow.
 
-Missing Value Analysis
+### Dataset Loading
 
-Duplicate Analysis
+![Dataset Loading](screenshots/01_dataset_loading.png)
 
-Negative Quantity Investigation
+### Dataset Structure
 
-UnitPrice Validation
+![Dataset Structure](screenshots/02_dataset_structure.png)
 
-Final Data Quality Check
+### Statistical Summary
 
-Final Processed Dataset
+![Statistical Summary](screenshots/03_statistical_summary.png)
 
-Processed Dataset Saved
+### Categorical Summary
 
-📁 Project Structure
+![Categorical Summary](screenshots/04_categorical_summary.png)
+
+### Missing Value Analysis
+
+![Missing Value Analysis](screenshots/05_missing_value_analysis.png)
+
+### Duplicate Analysis
+
+![Duplicate Analysis](screenshots/06_duplicate_analysis.png)
+
+### Duplicate Validation
+
+![Duplicate Validation](screenshots/07_duplicate_validation.png)
+
+### Negative Quantity Investigation
+
+![Negative Quantity Investigation](screenshots/08_negative_quantity_investigation.png)
+
+### Non-Cancelled Negative Quantity Analysis
+
+![Non-Cancelled Negative Quantity Analysis](screenshots/09_non_cancelled_negative_analysis.png)
+
+### Invalid Record Removal
+
+![Invalid Record Removal](screenshots/10_invalid_record_removal.png)
+
+### UnitPrice Validation
+
+![UnitPrice Validation](screenshots/11_unitprice_validation.png)
+
+### Zero-Price Investigation
+
+![Zero-Price Investigation](screenshots/12_zero_price_investigation_img1.png)
+
+### InvoiceDate Validation
+
+![InvoiceDate Validation](screenshots/13_invoice_date_validation.png)
+
+### Date Feature Extraction
+
+![Date Feature Extraction](screenshots/14_date_feature_extraction.png)
+
+### Final Data Quality Check
+
+![Final Data Quality Check](screenshots/15_final_data_quality_check.png)
+
+### Final Processed Dataset
+
+![Final Processed Dataset](screenshots/16_final_processed_dataset.png)
+
+### Processed Dataset Saved
+
+![Processed Dataset Saved](screenshots/17_processed_dataset_saved.png)
+
+---
+
+# 📁 Project Structure
+
+```text
 Online-Retail-Data-Cleaning/
 │
 ├── data/
@@ -407,74 +478,113 @@ Online-Retail-Data-Cleaning/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-🛠️ Technologies Used
-Python
-Pandas
-NumPy
-Matplotlib
-Seaborn
-OpenPyXL
-Jupyter Notebook
-VS Code
-▶️ How to Run
-1. Clone the repository
+```
+
+---
+
+# 🛠️ Technologies Used
+
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Seaborn**
+- **OpenPyXL**
+- **Jupyter Notebook**
+- **VS Code**
+
+---
+
+# ▶️ How to Run
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/rajashekar737/Online-Retail-Data-Cleaning.git
-2. Navigate to the project
+```
+
+### 2. Navigate to the project
+
+```bash
 cd Online-Retail-Data-Cleaning
-3. Create a virtual environment
+```
+
+### 3. Create a virtual environment
+
+```bash
 python -m venv venv
-4. Activate the environment
+```
+
+### 4. Activate the environment
 
 Windows:
 
+```bash
 venv\Scripts\activate
-5. Install dependencies
+```
+
+### 5. Install dependencies
+
+```bash
 pip install -r requirements.txt
-6. Open the notebook
+```
+
+### 6. Open the notebook
 
 Open:
 
+```text
 notebooks/Week_1_Data_Cleaning.ipynb
+```
 
 Run the notebook cells sequentially.
 
-📚 Dataset Source
+---
 
-The dataset was obtained from the UCI Machine Learning Repository – Online Retail Dataset.
+# 📚 Dataset Source
+
+The dataset was obtained from the **UCI Machine Learning Repository – Online Retail Dataset**.
 
 Dataset source:
 
 https://archive.ics.uci.edu/dataset/352/online+retail
 
-🎓 Internship Task
+---
 
-Internship: Virtual Data Science with Python Trainee
+# 🎓 Internship Task
 
-Task: Week 1 – Data Acquisition, Cleaning, and Preprocessing
+**Internship:** Virtual Data Science with Python Trainee
+
+**Task:** Week 1 – Data Acquisition, Cleaning, and Preprocessing
 
 The project demonstrates the required skills of:
 
-Public dataset acquisition
-Data exploration
-Missing-value handling
-Duplicate detection
-Outlier investigation
-Erroneous-entry handling
-Data preprocessing
-Documentation
-Reflective analysis of preprocessing decisions
-👤 Author
+- Public dataset acquisition
+- Data exploration
+- Missing-value handling
+- Duplicate detection
+- Outlier investigation
+- Erroneous-entry handling
+- Data preprocessing
+- Documentation
+- Reflective analysis of preprocessing decisions
 
-Ponnam Raja Shekar
+---
+
+# 👤 Author
+
+**Ponnam Raja Shekar**
 
 B.Tech — Computer Science & Data Science
 
 GitHub: https://github.com/rajashekar737
 
-⭐ Project Outcome
+---
+
+# ⭐ Project Outcome
 
 The project demonstrates a structured and transparent approach to real-world data cleaning.
 
-Rather than automatically removing unusual observations, the workflow investigates their meaning and applies preprocessing decisions based on data quality and business context.
+Rather than automatically removing unusual observations, the workflow investigates their meaning and applies preprocessing decisions based on **data quality and business context**.
 
 The resulting dataset is prepared for further exploratory data analysis, visualization, and machine-learning workflows.
