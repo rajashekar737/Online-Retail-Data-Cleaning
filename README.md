@@ -372,11 +372,11 @@ The approach therefore prioritizes **data integrity, transparency, and business 
 
 # 📸 Analysis Evidence
 
-The `screenshots/` directory contains evidence of the major stages of the data-cleaning and preprocessing workflow.
+The `screenshots/` directory contains visual evidence of the major stages of the data-cleaning and preprocessing workflow.
 
 ### 1. Dataset Loading
 
-![Dataset Loading](screenshots/01_dataset_preview.png)
+![Dataset Preview](screenshots/01_dataset_preview.png)
 
 ### 2. Dataset Structure
 
